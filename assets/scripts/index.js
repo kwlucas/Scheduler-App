@@ -26,4 +26,7 @@ function checkTimeblock(blockEl) {
 $('document').ready(function () {
     $('#currentDay').text(moment().format('dddd, MMMM Do, YYYY'));
     
+    $('.saveBtn').on('click', function() {
+        localStorage.setItem($(this).parent().attr('id'), $(this).siblings('.description').val());
+    });
 })
