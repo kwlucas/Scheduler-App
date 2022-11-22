@@ -32,5 +32,6 @@ $('document').ready(function () {
 
     $('.time-block').each(function () {
         $(this).children('.description').val(localStorage.getItem($(this).attr('id')));
+        checkTimeblock($(this));
     })
 })
