@@ -6,6 +6,24 @@ function getHour(timeId){
     return hour;
 }
 
+function checkTimeblock(blockEl) {
+    const currentHour = moment().hours()
+    const checkHour = getHour(blockEl.attr('id'));
+    
+    if(checkHour > currentHour){
+        blockEl.addClass('future');
+    } else if(checkHour == currentHour){
+        blockEl.addClass('present');
+        blockEl.removeClass('future');
+    }
+    else if(checkHour < currentHour){
+        blockEl.addClass('past');
+        blockEl.removeClass('present');
+        blockEl.removeClass('future');
+    }
+};
+
 $('document').ready(function () {
     $('#currentDay').text(moment().format('dddd, MMMM Do, YYYY'));
+    
 })
