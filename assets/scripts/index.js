@@ -29,4 +29,8 @@ $('document').ready(function () {
     $('.saveBtn').on('click', function() {
         localStorage.setItem($(this).parent().attr('id'), $(this).siblings('.description').val());
     });
+
+    $('.time-block').each(function () {
+        $(this).children('.description').val(localStorage.getItem($(this).attr('id')));
+    })
 })
