@@ -26,7 +26,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The scheduler app allows users to add events on the scheduel and saves them to local storage as it keeps track of the time.
+The scheduler app allows users to add events on the schedule and saves them to local storage as it keeps track of the time.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
